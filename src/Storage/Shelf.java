@@ -1,15 +1,23 @@
 package Storage;
 
-import java.awt.Image;
+	
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import javafx.scene.image.Image;
 
 /**
  * Represents one shelf image containing a lot of products
  */
-public class Shelf {
+
+public class Shelf implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5073673584629693524L;
 	private String shelfId;
-	private Image shelfImage;
+	private transient Image shelfImage;
 	private List<Product> productList;
 	
 	public Shelf(String shelfId, Image shelfImage) {
@@ -18,6 +26,7 @@ public class Shelf {
 		this.shelfImage = shelfImage;
 		this.productList = new ArrayList<>();
 	}
+	
 	public List<Product> getProductList() {
 		return productList;
 	}
