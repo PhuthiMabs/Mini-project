@@ -1,9 +1,19 @@
+import Storage.TreeGraph;
+import Visualisation.GuiHandler;
 
+/**
+ * Entry point of application
+ */
 public class Main {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+	/**
+	 * main method
+	 * @param args - command line arguments 
+	 */
+    public static void main(String[] args) {
+        // Initialize with some sample data
+        TreeGraph productGraph = new TreeGraph(new java.util.HashMap<>());
+        
+        // Launch the JavaFX application
+        GuiHandler.launchApp();
+    }
 }

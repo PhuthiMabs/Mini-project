@@ -2,14 +2,21 @@ package Storage;
 /**
  * Just products being taken in storing its data
  */
-import java.awt.Image;
+
+import java.io.Serializable;	
 import java.util.Objects;
 
-public class Product {
+import javafx.scene.image.Image;
+
+public class Product implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6224236929731330003L;
 	private String name;//Name of product being stored
 	private Features features;//feature of each image of product ,e.g shape etc..
 	private Shelf shelf;//shelf ,product is found in 
-	private Image img;//image of product
+	private transient Image img;//image of product
 	private Date expiryDate;//how many days before a product expires
 	private FreshnessLvl fresh;//how fresh products are
 	private String imagePath;
